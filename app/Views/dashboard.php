@@ -19,9 +19,10 @@
                     <div class="col-8">
                         <div class="d-inline-block"><a
                                 class="navbar-brand pt-0 fs-3 text-black d-flex align-items-center"
-                                href="index.html"><img class="img-fluid" src="/assets/img/icons/logo-icon.png"
-                                    alt="" /><span class="fw-bolder ms-2">Foto</span><span
-                                    class="fw-thin">gency</span></a></div>
+                                href="/home/dashboard"><img class="img-fluid" src="/assets/img/icons/logo-icon.png"
+                                    alt="" /><span class="fw-thin ">Welcome,</span><span class="fw-bolder ms-2">
+                                    <?php echo session()->get('username') ?>
+                                </span></a></div>
                     </div>
                     <div class="col-4 d-lg-none text-end pe-0">
                         <button class="btn p-0 shadow-none text-black fs-2 d-inline-block" data-bs-toggle="offcanvas"
@@ -71,7 +72,7 @@
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="about.html">About</a></li>
                                     <li class="nav-item px-2     position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="blog.html">Blog</a></li>
+                                            aria-current="page" href="/home/logout">Logout</a></li>
 
                                 </ul>
                             </div>
@@ -96,16 +97,16 @@
                     </div>
                 </div>
                 <div class="row mt-md-n6">
-                    <div class="col-2 d-none d-lg-block mt-auto"><img class="img-fluid" src="/assets/img/home/img2.png"
-                            alt="" />
+                    <div class="col-2 d-none d-lg-block mt-auto"><img class="img-fluid"
+                            src="/galeri/assets/img/home/img2.png" alt="" />
                     </div>
                     <div class="col-1 mt-auto d-none d-lg-block"><a class="scroll-indicator text-warning"
                             href="#footer">
-                            <span>SCROLL </span><img src="/assets/img/icons/long-arrow.png" alt="" /></a>
+                            <span>SCROLL </span><img src="galeri/assets/img/icons/long-arrow.png" alt="" /></a>
                     </div>
                     <div class="col-lg-7 position-relative">
                         <div class="position-relative overflow-hidden overflow-md-visible"><img class="img-fluid"
-                                src="/assets/img/home/img1.png" alt="" />
+                                src="/galeri/assets/img/home/img1.png" alt="" />
                             <div class="img-circle p-5 p-md-7 rounded-circle"></div>
                             <div class="img-circle-2 p-5 p-md-7 rounded-circle"></div>
                         </div>
@@ -118,11 +119,11 @@
                         </div>
                         <div class="position-absolute start-0 bottom-0 d-lg-none"><a
                                 class="scroll-indicator text-warning" href="/home/footer"> <span>SCROLL
-                                </span><img src="/assets/img/icons/long-arrow.png" alt="" /></a>
+                                </span><img src="/galeri/assets/img/icons/long-arrow.png" alt="" /></a>
                         </div>
                     </div>
-                    <div class="col-2 d-none d-lg-block mb-auto"><img class="img-fluid" src="/assets/img/home/img3.png"
-                            alt="" />
+                    <div class="col-2 d-none d-lg-block mb-auto"><img class="img-fluid"
+                            src="/galeri/assets/img/home/img3.png" alt="" />
                     </div>
                 </div>
             </div>

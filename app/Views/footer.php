@@ -16,8 +16,8 @@
         <div class="row g-0">
             <div class="col-md-6 mb-5 mb-md-0">
                 <div class="mb-4 d-inline-block"><a class="navbar-brand pt-0 fs-3 text-white d-flex align-items-center"
-                        href="index.html"><img class="img-fluid" src="/assets/img/icons/dark-logo-icon.png" alt=""
-                            width="25" height="25" /><span class="fw-bolder ms-2">Foto</span><span
+                        href="index.html"><img class="img-fluid" src="/galeri/assets/img/icons/dark-logo-icon.png"
+                            alt="" width="25" height="25" /><span class="fw-bolder ms-2">Foto</span><span
                             class="fw-thin">gency</span></a></div>
                 <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-map-marker-alt"></i><a
                         class="nav-link text-300 d-inline"
@@ -65,20 +65,20 @@
 
 <!-- ===============================================-->
 <!--    JavaScripts-->
-<!- <script src="/vendors/popper/popper.min.js"></script>
-    <script src="/vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="/vendors/anchorjs/anchor.min.js"></script>
-    <script src="/vendors/is/is.min.js"></script>
-    <script src="/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="/vendors/isotope-layout/isotope.pkgd.min.js"> </script>
-    <script src="/vendors/isotope-packery/packery-mode.pkgd.min.js"> </script>
-    <script src="/vendors/glightbox/glightbox.min.js"></script>
-    <script src="/vendors/fontawesome/all.min.js"></script>
-    <script src="/vendors/lodash/lodash.min.js"></script>
+<!- <script src="/galeri/vendors/popper/popper.min.js"></script>
+    <script src="/galeri/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="/galeri/vendors/anchorjs/anchor.min.js"></script>
+    <script src="/galeri/vendors/is/is.min.js"></script>
+    <script src="/galeri/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="/galeri/vendors/isotope-layout/isotope.pkgd.min.js"> </script>
+    <script src="/galeri/vendors/isotope-packery/packery-mode.pkgd.min.js"> </script>
+    <script src="/galeri/vendors/glightbox/glightbox.min.js"></script>
+    <script src="/galeri/vendors/fontawesome/all.min.js"></script>
+    <script src="/galeri/vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="/vendors/prism/prism.js"></script>
-    <script src="/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="/assets/js/theme.js"></script>
+    <script src="/galeri/vendors/prism/prism.js"></script>
+    <script src="/galeri/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="/galeri/assets/js/theme.js"></script>
 
 
     </body>

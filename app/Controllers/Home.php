@@ -9,6 +9,13 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Home extends BaseController
 {
+    public function index()
+    {
+        echo view('/admin/header');
+        // echo view('/admin/menuutama');
+        echo view('/admin/login');
+        echo view('/admin/footer');
+    }
     public function dashboard()
     {
         echo view('header');

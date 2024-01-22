@@ -76,6 +76,12 @@
                                             aria-current="page" href="/home/dashboard">Home</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0 active"
                                             aria-current="page" href="/home/gallery">Gallery</a></li>
+                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
+                                            aria-current="page" href="/home/logout">Logout</a></li>
+                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
+                                            aria-current="page" href="#">#</a></li>
+                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
+                                            aria-current="page" href="#">#</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -106,39 +112,39 @@
                 </div>
                 <div class="row g-3" data-isotope='{"layoutMode":"packery"}'>
                     <div class="col-lg-3 col-sm-6 col-12 shortfilms gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/assets/img/gallery/1.png" alt=""
+                            class="img-fluid w-100" src="/galeri/assets/img/gallery/1.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12 shortfilms gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/assets/img/gallery/2.png" alt=""
+                            class="img-fluid w-100" src="/galeri/assets/img/gallery/2.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-6 col-12 shortfilms gallery-item isotope-item"><img class="img-fluid w-100"
-                            src="/assets/img/gallery/3.png" alt=""
+                            src="/galeri/assets/img/gallery/3.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-6 col-12 professional gallery-item isotope-item"><img class="img-fluid w-100"
-                            src="/assets/img/gallery/4.png" alt=""
+                            src="/galeri/assets/img/gallery/4.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12 professional gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/assets/img/gallery/5.png" alt=""
+                            class="img-fluid w-100" src="/galeri/assets/img/gallery/5.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12 professional gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/assets/img/gallery/6.png" alt=""
+                            class="img-fluid w-100" src="/galeri/assets/img/gallery/6.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12 commercial gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/assets/img/gallery/7.png" alt=""
+                            class="img-fluid w-100" src="/galeri/assets/img/gallery/7.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12 commercial gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/assets/img/gallery/8.png" alt=""
+                            class="img-fluid w-100" src="/galeri/assets/img/gallery/8.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                     <div class="col-lg-6 col-12 commercial gallery-item isotope-item"><img class="img-fluid w-100"
-                            src="/assets/img/gallery/9.png" alt=""
+                            src="/galeri/assets/img/gallery/9.png" alt=""
                             data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
                     </div>
                 </div>
