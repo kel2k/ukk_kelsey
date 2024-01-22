@@ -1,0 +1,40 @@
+ERROR - 2023-10-20 02:46:49 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(132): App\Models\M_model->simpan('data_murid', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-20 02:47:16 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(132): App\Models\M_model->simpan('data_murid', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-20 10:40:19 --> Invalid argument supplied for foreach()
+in APPPATH\Views\datauser.php on line 45.
+ 1 APPPATH\Views\datauser.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'E:\\xampp\\htdocs\\saran\\app\\Views\\datauser.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\saran\\app\\Views\\datauser.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datauser', [], true)
+ 5 APPPATH\Controllers\Home.php(42): view('datauser')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')

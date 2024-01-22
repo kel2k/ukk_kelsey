@@ -1,0 +1,988 @@
+ERROR - 2023-11-10 08:03:01 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(146): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:05:08 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(146): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 08:06:28 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')'
+in APPPATH\Controllers\Home.php on line 130.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('home/user', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('home/user')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('home/user')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 08:10:18 --> mysqli_sql_exception: Unknown column 'createdBy' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(134): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:10:18 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(149): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:10:55 --> mysqli_sql_exception: Column 'created_by' cannot be null in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(134): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:10:55 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(149): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:11:11 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(149): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:12:09 --> mysqli_sql_exception: Column 'created_by' cannot be null in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(134): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:12:09 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(149): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:14:52 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(150): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:15:22 --> mysqli_sql_exception: Column 'created_by' cannot be null in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(133): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:15:22 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(148): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:16:04 --> mysqli_sql_exception: Column 'created_by' cannot be null in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(134): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:16:04 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(149): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:16:16 --> mysqli_sql_exception: Column 'created_by' cannot be null in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(134): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:16:16 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(149): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:22:01 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(150): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:22:24 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(150): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:23:00 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(150): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:29:34 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(150): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-11-10 08:31:53 --> mysqli_sql_exception: Unknown column 'tangal_lahir' in 'field list' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `si...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(152): App\Models\M_model->simpan('siswa', Array)
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->aksi_adduser()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 08:39:48 --> Invalid argument supplied for foreach()
+in APPPATH\Views\tabel_murid.php on line 26.
+ 1 APPPATH\Views\tabel_murid.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'E:\\xampp\\htdocs\\project_client\\app\\Views\\tabel_murid.php', 26, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\project_client\\app\\Views\\tabel_murid.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_murid', [], true)
+ 5 APPPATH\Controllers\Home.php(96): view('tabel_murid')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->murid()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 08:41:26 --> mysqli_sql_exception: Table 'client.murid' doesn't exist in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(93): App\Models\M_model->join2('murid', 'user', 'murid.user_id=u...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->murid()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 08:41:26 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 41.
+ 1 APPPATH\Controllers\Home.php(93): App\Models\M_model->join2('murid', 'user', 'murid.user_id=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->murid()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 08:53:55 --> Invalid file: "menuutama.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menuutama.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('menuutama', [], true)
+ 3 APPPATH\Controllers\Home.php(177): view('menuutama')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 08:54:04 --> Invalid file: "editsiswa.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editsiswa.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('editsiswa', [], true)
+ 3 APPPATH\Controllers\Home.php(178): view('editsiswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:02:34 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:03:56 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:04:08 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:05:46 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:05:49 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:06:04 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:06:07 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:06:40 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:08:17 --> mysqli_sql_exception: Unknown column 'level' in 'from clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join2('user', 'siswa', 'level', 'user.level=leve...', 'siswa.user_id=u...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:08:17 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 41.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join2('user', 'siswa', 'level', 'user.level=level.id_level', 'siswa.user_id=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:08:19 --> mysqli_sql_exception: Unknown column 'level' in 'from clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join2('user', 'siswa', 'level', 'user.level=leve...', 'siswa.user_id=u...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:08:19 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 41.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join2('user', 'siswa', 'level', 'user.level=level.id_level', 'siswa.user_id=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:08:44 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'siswa.user_id=u...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:08:44 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'siswa.user_id=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:08:44 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'siswa.user_id=u...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:08:44 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'siswa.user_id=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:09:26 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:09:26 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:09:27 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:09:27 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:09:27 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:09:27 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:09:27 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:09:27 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:09:28 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:09:28 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:10:40 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:10:40 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 09:10:40 --> mysqli_sql_exception: Unknown column 'level.id_level' in 'on clause' in E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\project_client\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\project_client\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\project_client\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\project_client\app\Models\M_Model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\project_client\app\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=leve...', 'user.id_user=si...')
+#6 E:\xampp\htdocs\project_client\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\project_client\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\project_client\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\project_client\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\project_client\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-10 09:10:40 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 46.
+ 1 APPPATH\Controllers\Home.php(83): App\Models\M_model->join3('user', 'siswa', 'level', 'user.level=level.id_level', 'user.id_user=siswa.user_id')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:11:12 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:11:21 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:11:24 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:11:43 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:12:25 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:13:19 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:14:34 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:15:16 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:16:41 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:18:51 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:20:12 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:20:14 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:20:17 --> Invalid file: "menuutama.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menuutama.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('menuutama', [], true)
+ 3 APPPATH\Controllers\Home.php(178): view('menuutama')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser('26')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:20:30 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:20:50 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:22:35 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:24:01 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:25:45 --> Too few arguments to function App\Controllers\Home::edituser(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->edituser()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:36:42 --> Too few arguments to function App\Controllers\Home::reset(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 100.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:56:59 --> syntax error, unexpected '{'
+in APPPATH\Controllers\Home.php on line 108.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('Home/user', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('Home/user')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('Home/user')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 09:57:00 --> syntax error, unexpected '{'
+in APPPATH\Controllers\Home.php on line 108.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('Home/user', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('Home/user')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('Home/user')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 10:01:00 --> syntax error, unexpected '{'
+in APPPATH\Controllers\Home.php on line 107.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('Home/user', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('Home/user')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('Home/user')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 10:01:00 --> syntax error, unexpected '{'
+in APPPATH\Controllers\Home.php on line 107.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('Home/user', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('Home/user')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('Home/user')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 10:11:02 --> Too few arguments to function App\Controllers\Home::reset(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 100.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 10:11:23 --> Too few arguments to function App\Controllers\Home::reset(), 0 passed in E:\xampp\htdocs\project_client\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 100.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+CRITICAL - 2023-11-10 11:27:50 --> Invalid argument supplied for foreach()
+in APPPATH\Views\tabel_siswa.php on line 27.
+ 1 APPPATH\Views\tabel_siswa.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'E:\\xampp\\htdocs\\project_client\\app\\Views\\tabel_siswa.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\project_client\\app\\Views\\tabel_siswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_siswa', [], true)
+ 5 APPPATH\Controllers\Home.php(98): view('tabel_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\project_client\\public\\index.php')
+ERROR - 2023-11-10 12:53:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('127.0.0.1', 'root', '', 'client', 3306, '', 0)
+#1 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\sarpras_sekolah\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\sarpras_sekolah\app\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=leve...')
+#6 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\sarpras_sekolah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\sarpras_sekolah\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\sarpras_sekolah\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\sarpras_sekolah\app\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=leve...')
+#5 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#6 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\sarpras_sekolah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\sarpras_sekolah\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-10 12:53:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+LEFT JOIN `level` ON `user`.`level`=`level`.`id_level`', [], false)
+ 3 APPPATH\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=level.id_level')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\sarpras_sekolah\\public\\index.php')
+ERROR - 2023-11-10 13:35:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('127.0.0.1', 'root', '', 'client', 3306, '', 0)
+#1 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\sarpras_sekolah\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\sarpras_sekolah\app\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=leve...')
+#6 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\sarpras_sekolah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\sarpras_sekolah\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\sarpras_sekolah\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\sarpras_sekolah\app\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=leve...')
+#5 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#6 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\sarpras_sekolah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\sarpras_sekolah\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-10 13:35:21 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+LEFT JOIN `level` ON `user`.`level`=`level`.`id_level`', [], false)
+ 3 APPPATH\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=level.id_level')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\sarpras_sekolah\\public\\index.php')
+ERROR - 2023-11-10 13:36:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('127.0.0.1', 'root', '', 'client', 3306, '', 0)
+#1 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\sarpras_sekolah\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\sarpras_sekolah\app\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=leve...')
+#6 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#7 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\sarpras_sekolah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\sarpras_sekolah\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in E:\xampp\htdocs\sarpras_sekolah\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\sarpras_sekolah\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\sarpras_sekolah\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\sarpras_sekolah\app\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=leve...')
+#5 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(919): App\Controllers\Home->user()
+#6 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 E:\xampp\htdocs\sarpras_sekolah\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\sarpras_sekolah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\sarpras_sekolah\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-10 13:36:03 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+LEFT JOIN `level` ON `user`.`level`=`level`.`id_level`', [], false)
+ 3 APPPATH\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(84): App\Models\M_model->join2('user', 'level', 'user.level=level.id_level')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\sarpras_sekolah\\public\\index.php')
