@@ -1,0 +1,399 @@
+CRITICAL - 2023-10-19 02:01:11 --> Too few arguments to function App\Controllers\Home::gantipassword(), 0 passed in E:\xampp\htdocs\saran\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->gantipassword()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+CRITICAL - 2023-10-19 02:01:30 --> Invalid file: "menuutama.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menuutama.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('menuutama', [], true)
+ 3 APPPATH\Controllers\Home.php(76): view('menuutama')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->gantipassword()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+CRITICAL - 2023-10-19 04:08:56 --> Invalid file: "menuutama.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menuutama.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('menuutama', [], true)
+ 3 APPPATH\Controllers\Home.php(88): view('menuutama')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambah_murid()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 04:12:13 --> mysqli_sql_exception: Column 'username' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(115): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:12:13 --> mysqli_sql_exception: Column 'nama_murid' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(127): App\Models\M_model->simpan('data_murid', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:13:02 --> mysqli_sql_exception: Column 'username' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(115): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:13:13 --> mysqli_sql_exception: Column 'username' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(115): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:15:45 --> mysqli_sql_exception: Column 'email' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(115): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:16:21 --> mysqli_sql_exception: Column 'email' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(115): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:16:21 --> mysqli_sql_exception: Column 'users' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(129): App\Models\M_model->simpan('data_murid', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:18:36 --> mysqli_sql_exception: Column 'email' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(114): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:18:36 --> mysqli_sql_exception: Table 'saran.users' doesn't exist in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(116): App\Models\M_model->getWhere2('users', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 04:18:36 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\M_Model.php on line 31.
+ 1 APPPATH\Controllers\Home.php(116): App\Models\M_model->getWhere2('users', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 04:18:52 --> mysqli_sql_exception: Column 'email' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(114): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:18:52 --> mysqli_sql_exception: Column 'users' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(128): App\Models\M_model->simpan('data_murid', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:20:15 --> mysqli_sql_exception: Column 'email' cannot be null in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(114): App\Models\M_model->simpan('user', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:20:15 --> mysqli_sql_exception: Unknown column 'users' in 'field list' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(128): App\Models\M_model->simpan('data_murid', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->aksi_tambahmurid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-10-19 04:22:35 --> mysqli_sql_exception: Unknown column 'data_murid.users' in 'on clause' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(27): App\Models\M_model->join2('data_murid', 'user', 'data_murid.user...')
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->murid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 04:22:35 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 41.
+ 1 APPPATH\Controllers\Home.php(27): App\Models\M_model->join2('data_murid', 'user', 'data_murid.users=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->murid()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 04:29:49 --> mysqli_sql_exception: Unknown column 'data_murid.users' in 'on clause' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(27): App\Models\M_model->join2('data_murid', 'user', 'data_murid.user...')
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->murid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 04:29:49 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 41.
+ 1 APPPATH\Controllers\Home.php(27): App\Models\M_model->join2('data_murid', 'user', 'data_murid.users=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->murid()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+CRITICAL - 2023-10-19 04:30:25 --> Too few arguments to function App\Models\M_model::join3(), 3 passed in E:\xampp\htdocs\saran\app\Controllers\Home.php on line 27 and exactly 5 expected
+in APPPATH\Models\M_Model.php on line 44.
+ 1 APPPATH\Controllers\Home.php(27): App\Models\M_model->join3('data_murid', 'user', 'data_murid.users=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->murid()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 04:30:30 --> mysqli_sql_exception: Unknown column 'data_murid.users' in 'on clause' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(27): App\Models\M_model->join2('data_murid', 'user', 'data_murid.user...')
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->murid()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 04:30:30 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 41.
+ 1 APPPATH\Controllers\Home.php(27): App\Models\M_model->join2('data_murid', 'user', 'data_murid.users=user.id_user')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->murid()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 04:50:14 --> mysqli_sql_exception: Table 'saran.pinjaman' doesn't exist in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(139): App\Models\M_model->getAllData()
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->export_pdf1()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 04:50:14 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\M_Model.php on line 159.
+ 1 APPPATH\Controllers\Home.php(139): App\Models\M_model->getAllData()
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->export_pdf1()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 04:50:38 --> mysqli_sql_exception: Table 'saran.data_siswa' doesn't exist in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(139): App\Models\M_model->getAllData()
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->export_pdf1()
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 04:50:38 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\M_Model.php on line 159.
+ 1 APPPATH\Controllers\Home.php(139): App\Models\M_model->getAllData()
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->export_pdf1()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 06:45:25 --> mysqli_sql_exception: Table 'saran.data_siswa' doesn't exist in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `da...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(16): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(229): App\Models\M_model->hapus('data_siswa', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->hapusmurid('17')
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 06:45:52 --> Too few arguments to function App\Controllers\Home::hapusmurid(), 0 passed in E:\xampp\htdocs\saran\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 223.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->hapusmurid()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+CRITICAL - 2023-10-19 06:46:08 --> Too few arguments to function App\Controllers\Home::hapusmurid(), 0 passed in E:\xampp\htdocs\saran\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 223.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->hapusmurid()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+CRITICAL - 2023-10-19 06:46:10 --> Too few arguments to function App\Controllers\Home::hapusmurid(), 0 passed in E:\xampp\htdocs\saran\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 223.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->hapusmurid()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+CRITICAL - 2023-10-19 06:46:22 --> Too few arguments to function App\Controllers\Home::hapusmurid(), 0 passed in E:\xampp\htdocs\saran\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 223.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->hapusmurid()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')
+ERROR - 2023-10-19 06:53:17 --> mysqli_sql_exception: Unknown column 'murid.user' in 'on clause' in E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\saran\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\saran\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\saran\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\saran\app\Models\M_Model.php(56): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\xampp\htdocs\saran\app\Controllers\Home.php(246): App\Models\M_model->joinW('data_murid', 'user', 'murid.user=user...', Array)
+#6 E:\xampp\htdocs\saran\system\CodeIgniter.php(919): App\Controllers\Home->editmurid('1')
+#7 E:\xampp\htdocs\saran\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 E:\xampp\htdocs\saran\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\saran\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\saran\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-19 06:53:17 --> Call to a member function getRow() on bool
+in APPPATH\Models\M_Model.php on line 56.
+ 1 APPPATH\Controllers\Home.php(246): App\Models\M_model->joinW('data_murid', 'user', 'murid.user=user.id_user', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->editmurid('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\saran\\public\\index.php')

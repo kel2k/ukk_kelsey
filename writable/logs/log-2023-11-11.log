@@ -1,0 +1,22 @@
+CRITICAL - 2023-11-11 04:17:05 --> Invalid argument supplied for foreach()
+in APPPATH\Views\tabel_seksi_sarana.php on line 27.
+ 1 APPPATH\Views\tabel_seksi_sarana.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'E:\\xampp\\htdocs\\sarpras_sekolah\\app\\Views\\tabel_seksi_sarana.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\sarpras_sekolah\\app\\Views\\tabel_seksi_sarana.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_seksi_sarana', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('tabel_seksi_sarana', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->seksi_sarana()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\sarpras_sekolah\\public\\index.php')
+CRITICAL - 2023-11-11 04:26:44 --> Invalid file: "add_.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('add_.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('add_', [], true)
+ 3 APPPATH\Controllers\Home.php(186): view('add_', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->addstaf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\sarpras_sekolah\\public\\index.php')

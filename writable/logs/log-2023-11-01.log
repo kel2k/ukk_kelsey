@@ -1,0 +1,42 @@
+CRITICAL - 2023-11-01 02:20:48 --> Invalid file: "menuutama.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menuutama.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('menuutama', [], true)
+ 3 APPPATH\Controllers\Home.php(80): view('menuutama')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\proyek_client\\public\\index.php')
+CRITICAL - 2023-11-01 02:20:54 --> Invalid file: "user.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user', [], true)
+ 3 APPPATH\Controllers\Home.php(81): view('user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\proyek_client\\public\\index.php')
+CRITICAL - 2023-11-01 02:20:55 --> Invalid file: "user.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user', [], true)
+ 3 APPPATH\Controllers\Home.php(81): view('user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\proyek_client\\public\\index.php')
+CRITICAL - 2023-11-01 02:21:41 --> Invalid argument supplied for foreach()
+in APPPATH\Views\tabel_user.php on line 31.
+ 1 APPPATH\Views\tabel_user.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'E:\\xampp\\htdocs\\proyek_client\\app\\Views\\tabel_user.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\proyek_client\\app\\Views\\tabel_user.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_user', [], true)
+ 5 APPPATH\Controllers\Home.php(81): view('tabel_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\proyek_client\\public\\index.php')

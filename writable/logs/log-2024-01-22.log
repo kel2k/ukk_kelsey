@@ -1,0 +1,139 @@
+ERROR - 2024-01-22 02:25:47 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'client' in C:\Users\PC-7\Desktop\galeri\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\PC-7\Desktop\galeri\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'client', 3306, '', 0)
+#1 C:\Users\PC-7\Desktop\galeri\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PC-7\Desktop\galeri\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PC-7\Desktop\galeri\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PC-7\Desktop\galeri\app\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\PC-7\Desktop\galeri\app\Controllers\Home.php(65): App\Models\M_model->getWhere2('user', Array)
+#6 C:\Users\PC-7\Desktop\galeri\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#7 C:\Users\PC-7\Desktop\galeri\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PC-7\Desktop\galeri\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PC-7\Desktop\galeri\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PC-7\Desktop\galeri\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\D...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'client' in C:\Users\PC-7\Desktop\galeri\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PC-7\Desktop\galeri\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PC-7\Desktop\galeri\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PC-7\Desktop\galeri\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PC-7\Desktop\galeri\app\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\Users\PC-7\Desktop\galeri\app\Controllers\Home.php(65): App\Models\M_model->getWhere2('user', Array)
+#5 C:\Users\PC-7\Desktop\galeri\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#6 C:\Users\PC-7\Desktop\galeri\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\PC-7\Desktop\galeri\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\PC-7\Desktop\galeri\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\PC-7\Desktop\galeri\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\D...')
+#10 {main}
+CRITICAL - 2024-01-22 02:25:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'client'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Home.php(65): App\Models\M_model->getWhere2('user', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 02:29:33 --> Undefined property: stdClass::$email
+in APPPATH\Views\tabel_user.php on line 38.
+ 1 APPPATH\Views\tabel_user.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', 'C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_user', [], true)
+ 5 APPPATH\Controllers\Home.php(88): view('tabel_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 02:29:49 --> Undefined property: stdClass::$email
+in APPPATH\Views\tabel_user.php on line 38.
+ 1 APPPATH\Views\tabel_user.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', 'C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_user', [], true)
+ 5 APPPATH\Controllers\Home.php(88): view('tabel_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 02:29:51 --> Undefined property: stdClass::$email
+in APPPATH\Views\tabel_user.php on line 38.
+ 1 APPPATH\Views\tabel_user.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', 'C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_user', [], true)
+ 5 APPPATH\Controllers\Home.php(88): view('tabel_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 02:30:04 --> Undefined property: stdClass::$email
+in APPPATH\Views\tabel_user.php on line 38.
+ 1 APPPATH\Views\tabel_user.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', 'C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_user', [], true)
+ 5 APPPATH\Controllers\Home.php(88): view('tabel_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 02:30:09 --> Undefined property: stdClass::$created_at
+in APPPATH\Views\tabel_user.php on line 41.
+ 1 APPPATH\Views\tabel_user.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$created_at', 'C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\PC-7\\Desktop\\galeri\\app\\Views\\tabel_user.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tabel_user', [], true)
+ 5 APPPATH\Controllers\Home.php(88): view('tabel_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->user()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 10:24:38 --> Call to a member function getPhotos() on null
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Desktop\\galeri\\public\\index.php')
+CRITICAL - 2024-01-22 10:29:17 --> Call to a member function getPhotos() on null
+in APPPATH\Controllers\Home.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Desktop\\galeri\\public\\index.php')
+ERROR - 2024-01-22 10:31:04 --> mysqli_sql_exception: Table 'gallery.user' doesn't exist in C:\Users\Administrator\Desktop\galeri\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Administrator\Desktop\galeri\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Administrator\Desktop\galeri\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Administrator\Desktop\galeri\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Administrator\Desktop\galeri\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Administrator\Desktop\galeri\app\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\Administrator\Desktop\galeri\app\Controllers\Home.php(65): App\Models\M_model->getWhere2('user', Array)
+#6 C:\Users\Administrator\Desktop\galeri\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#7 C:\Users\Administrator\Desktop\galeri\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\Administrator\Desktop\galeri\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Administrator\Desktop\galeri\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Administrator\Desktop\galeri\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Admini...')
+#11 {main}
+CRITICAL - 2024-01-22 10:31:04 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\M_Model.php on line 31.
+ 1 APPPATH\Controllers\Home.php(65): App\Models\M_model->getWhere2('user', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Administrator\\Desktop\\galeri\\public\\index.php')
