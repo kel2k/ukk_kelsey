@@ -68,9 +68,9 @@
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/gallery">Gallery</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="exhibitions.html">Exhibitions</a></li>
+                                            aria-current="page" href="/home/upload">Upload Photo</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="about.html">About</a></li>
+                                            aria-current="page" href="#">About</a></li>
                                     <li class="nav-item px-2     position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/logout">Logout</a></li>
 

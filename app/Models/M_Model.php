@@ -5,12 +5,10 @@ use CodeIgniter\Model;
 
 class M_model extends Model
 {
-
     public function tampil($table)
     {
         return $this->db->table($table)->get()->getResult();
     }
-
     public function hapus($table, $where)
     {
         return $this->db->table($table)->delete($where);
@@ -36,10 +34,16 @@ class M_model extends Model
         return $this->db->table($table)->update($data, $where);
     }
 
-    public function join2($table1, $table2, $on)
+
+    public function join2($table, $table2, $on, $selectColumns = '*')
     {
-        return $this->db->table($table1)->join($table2, $on, 'left')->get()->getResult();
+        return $this->db->table($table)
+            ->select($selectColumns)
+            ->join($table2, $on)
+            ->get()
+            ->getResult();
     }
+
 
     public function join3($table1, $table2, $table3, $on, $on2)
     {

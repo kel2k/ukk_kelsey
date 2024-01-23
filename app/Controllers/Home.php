@@ -6,15 +6,23 @@ use App\Models\M_model;
 use Dompdf\Dompdf;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class Home extends BaseController
 {
     public function index()
     {
-        echo view('/admin/header');
+        echo view('header');
         // echo view('/admin/menuutama');
         echo view('/admin/login');
-        echo view('/admin/footer');
+        // echo view('footer');
+    }
+    public function test()
+    {
+        echo view('header');
+        // echo view('/admin/menuutama');
+        echo view('test');
+        echo view('footer');
     }
     public function dashboard()
     {
@@ -25,24 +33,28 @@ class Home extends BaseController
     }
     public function gallery()
     {
+        $model = new M_model();
+        $data['galeri'] = $model->tampil('photos');
         echo view('header');
         // echo view('menu');
-        echo view('gallery');
+        echo view('gallery', $data);
         echo view('footer');
     }
     public function portofolio()
     {
+        $model = new M_model();
+        $data['projects'] = $model->tampil('photos');
         echo view('header');
         // echo view('menu');
-        echo view('portofolio');
+        echo view('portofolio', $data);
         echo view('footer');
     }
     public function upload()
     {
-        echo view('/admin/header');
+        echo view('/header');
         // echo view('menu');
         echo view('/admin/upload');
-        echo view('/admin/footer');
+        // echo view('/footer');
     }
     public function gantipassword()
     {
@@ -72,6 +84,65 @@ class Home extends BaseController
         // print_r($password);
         $model->qedit('user', $data1, $where);
         return redirect()->to('/home/index/');
+    }
+    public function register()
+    {
+        $model = new M_model();
+
+        $data['user'] = $model->tampil('user');
+        echo view('header');
+        // echo view('menuutama');
+        echo view('register', $data);
+        // echo view('footer');
+    }
+    public function aksi_register()
+    {
+        $model = new M_model();
+        // $on='guru.user = user.id_user';
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        $email = $this->request->getPost('email');
+
+        $user = array(
+            'username' => $username,
+            'password' => md5('password'),
+            'email' => $email,
+            'level' => '1',
+            'created_at' => date('Y-m-d H:i:s')
+        );
+        $model = new M_model();
+        $model->simpan('user', $user);
+        return redirect()->to('/home');
+    }
+    public function aksi_upload()
+    {
+        $description = $this->request->getPost('description');
+        $category = $this->request->getPost('category');
+
+        $imageFile = $this->request->getFile('image');
+        if ($imageFile->isValid() && !$imageFile->hasMoved()) {
+            $imageName = $imageFile->getRandomName();
+            $imageFile->move('assets/images/', $imageName);
+
+            // Gunakan Intervention Image untuk mengubah ukuran gambar
+            $img = Image::make('assets/images/' . $imageName);
+            $img->resize(355, 465);
+            $img->save('assets/images/' . $imageName);
+        } else {
+            $imageName = 'default.jpg';
+        }
+
+        $data = [
+            'description' => $description,
+            'image' => $imageName,
+            'category' => $category,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+        $model = new M_model();
+        $model->simpan('photos', $data);
+
+        return redirect()->to('/home/portofolio');
     }
     public function aksi_login()
     {

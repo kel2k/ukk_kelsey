@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -43,17 +45,23 @@
                                             <input type="checkbox" class="form-check-input"> Remember me </label>
                                     </div>
                                     <!-- <a href="#" class="forgot-pass">Forgot password</a> -->
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
-                                </div>
-                                <!-- <div class="d-flex">
+                                    <div class="text-center">
+                                        <!-- Use one button for login -->
+                                        <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                                    </div>
+
+                                    <div class="text-center mt-3">
+                                        <!-- Use another button for register -->
+                                        <button type="button" class="btn btn-secondary btn-block enter-btn"
+                                            onclick="window.location.href='<?= base_url("Home/register") ?>'">Register</button>
+                                    </div>
+                                    <!-- <div class="d-flex">
                                     <button class="btn btn-facebook mr-2 col">
                                         <i class="mdi mdi-facebook"></i> Facebook </button>
                                     <button class="btn btn-google col">
                                         <i class="mdi mdi-google-plus"></i> Google plus </button>
                                 </div> -->
-                                <!-- <p class="sign-up">Don't have an Account?<a href="/home/register"> Sign Up</a></p> -->
+                                    <!-- <p class="sign-up">Don't have an Account?<a href="/home/register"> Sign Up</a></p> -->
                             </form>
                         </div>
                     </div>

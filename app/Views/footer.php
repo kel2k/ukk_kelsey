@@ -1,11 +1,12 @@
 <!-- end of .container-->
 
 </section>
+</div>
 <!-- <section> close ============================-->
 <!-- ============================================-->
-
-
 </main>
+
+
 <!-- ===============================================-->
 <!--    End of Main Content-->
 <!-- ===============================================-->
@@ -21,13 +22,13 @@
                             class="fw-thin">gency</span></a></div>
                 <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-map-marker-alt"></i><a
                         class="nav-link text-300 d-inline"
-                        href="https://www.google.com/maps/place/2109+WS+09+Oxford+Rd+%23127+ParkVilla+Hills,+">2109 WS
-                        09 Oxford Rd #127 ParkVilla Hills, MI 48334</a></div>
+                        href="https://www.google.com/maps/place/2109+WS+09+Oxford+Rd+%23127+ParkVilla+Hills,+">Sekolah
+                        Permata Harapan</a></div>
                 <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-phone"></i><a
-                        class="nav-link text-300 d-inline" href="tel:+8801976476893">+88 019 76456893</a></div>
+                        class="nav-link text-300 d-inline" href="tel:+8801976476893">+62 878 80330890</a></div>
                 <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-envelope"></i><a
                         class="nav-link text-300 d-inline"
-                        href="mailto:scrscrumbledegg@gmail.com">scrumbledegg@gmail.com</a></div>
+                        href="mailto:scrscrumbledegg@gmail.com">namakukelsey@gmail.com</a></div>
             </div>
             <div class="col-md-6">
                 <h5 class="text-white mb-2">SUBSCRIBE TO OUR NEWSLETTER</h5>

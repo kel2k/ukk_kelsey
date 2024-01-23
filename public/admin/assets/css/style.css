@@ -8834,7 +8834,7 @@ pre {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1;
-  color: #495057;
+  color: #;
   background-color: #2A3038;
   background-clip: padding-box;
   border: 1px solid #2c2e33;
@@ -15716,7 +15716,7 @@ body,
 html {
   overflow-x: hidden;
   padding-right: 0 !important;
-  background-color: #191c24; }
+  background-color: #f8f9fa; }
 
 *:-moz-full-screen,
 *:-webkit-full-screen,

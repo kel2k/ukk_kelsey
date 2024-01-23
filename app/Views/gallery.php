@@ -13,6 +13,42 @@
     <title>Gallery | All Works</title>
 
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var filterLinks = document.querySelectorAll('.filter-link');
+
+            filterLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    // Cek apakah link memiliki kelas "isotope-nav" dan "filter-link"
+                    if (link.classList.contains('isotope-nav') && link.classList.contains('filter-link')) {
+                        var filterValue = link.getAttribute('data-filter');
+                        var galleryItems = document.querySelectorAll('.gallery-item' + filterValue);
+
+                        // Cek apakah ada item galeri untuk kategori yang dipilih
+                        var hasImages = Array.from(galleryItems).some(function (item) {
+                            return !item.classList.contains('empty-gallery-item');
+                        });
+
+                        // Stop the default action and event propagation
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        if (!hasImages) {
+                            // Notify and redirect to "All" category if no images found
+                            alert('This category is empty. Redirecting to All.');
+                            window.location.href = '#!';
+                        } else {
+                            // Implementasikan logika filtering yang diperlukan di sini
+                            console.log('Filtering by:', filterValue);
+                        }
+                    } else {
+                        // Link tidak dapat diklik jika tidak memenuhi kriteria
+                        alert('This link cannot be clicked!');
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -25,7 +61,7 @@
                     <div class="col-8">
                         <div class="d-inline-block"><a
                                 class="navbar-brand pt-0 fs-3 text-black d-flex align-items-center"
-                                href="index.html"><img class="img-fluid" src="assets/img/icons/logo-icon.png"
+                                href="index.html"><img class="img-fluid" src="/galeri/assets/img/icons/logo-icon.png"
                                     alt="" /><span class="fw-bolder ms-2">Foto</span><span
                                     class="fw-thin">gency</span></a></div>
                         <div class="mt-4 d-none d-lg-block">
@@ -58,7 +94,7 @@
                                     <li class="nav-item"><a
                                             class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
                                             aria-current="page" href="/home/portofolio">Portfolio</a></li>
-                                            <li class="nav-item"><a
+                                    <li class="nav-item"><a
                                             class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
                                             aria-current="page" href="/home/gallery">GALLERY</a></li>
                                 </ul>
@@ -77,16 +113,16 @@
                                 <ul class="navbar-nav navbar-fotogency ms-auto text-end">
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/dashboard">Home</a></li>
-                                            <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
+                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/portofolio">Portofolio</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0 active"
                                             aria-current="page" href="/home/gallery">Gallery</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
+                                            aria-current="page" href="/home/upload">Upload Images</a></li>
+                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
+                                            aria-current="page" href="#">About</a></li>
+                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/logout">Logout</a></li>
-                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="#">#</a></li>
-                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="#">#</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -105,54 +141,32 @@
             <div class="container px-md-5">
                 <div class="position-md-absolute start-0 ms-2 mt-3 mb-4">
                     <ul class="nav gallery-tab d-flex gap-3" data-filter-nav="data-filter-nav">
-                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav active" href="#!"
+                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav active filter-link" href="#!"
                                 data-filter="*">All</a></li>
-                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav" href="#!"
+                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
                                 data-filter=".shortfilms">Short films</a></li>
-                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav" href="#!"
+                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
                                 data-filter=".professional">Professional</a></li>
-                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav" href="#!"
+                        <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
                                 data-filter=".commercial">Commercial</a></li>
+
+
+
                     </ul>
+
                 </div>
                 <div class="row g-3" data-isotope='{"layoutMode":"packery"}'>
-                    <div class="col-lg-3 col-sm-6 col-12 shortfilms gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/galeri/assets/img/gallery/1.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-12 shortfilms gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/galeri/assets/img/gallery/2.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-6 col-12 shortfilms gallery-item isotope-item"><img class="img-fluid w-100"
-                            src="/galeri/assets/img/gallery/3.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-6 col-12 professional gallery-item isotope-item"><img class="img-fluid w-100"
-                            src="/galeri/assets/img/gallery/4.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-12 professional gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/galeri/assets/img/gallery/5.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-12 professional gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/galeri/assets/img/gallery/6.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-12 commercial gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/galeri/assets/img/gallery/7.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-12 commercial gallery-item isotope-item"><img
-                            class="img-fluid w-100" src="/galeri/assets/img/gallery/8.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                    <div class="col-lg-6 col-12 commercial gallery-item isotope-item"><img class="img-fluid w-100"
-                            src="/galeri/assets/img/gallery/9.png" alt=""
-                            data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                    <?php foreach ($galeri as $gallery): ?>
+                        <div class="col-lg-3 col-sm-6 col-12 <?= strtolower($gallery->category) ?> gallery-item isotope-item <?php if (empty($gallery->image))
+                               echo 'empty-gallery-item'; ?>" data-category="<?= $gallery->category ?>">
+                            <?php if (!empty($gallery->image)): ?>
+                                <img class="portfolio-img img-fluid" src="<?= base_url('assets/images/' . $gallery->image) ?>"
+                                    alt=""
+                                    data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
+                            <?php endif; ?>
+                            <p>Category:
+                                <?= $gallery->category ?>
+                            </p>
+                        </div>
+
+                    <?php endforeach; ?>
