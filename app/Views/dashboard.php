@@ -64,7 +64,7 @@
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0 active"
                                             aria-current="page" href="index.html">Home</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="portfolio.html">Portfolio</a></li>
+                                            aria-current="page" href="/home/portofolio">Portfolio</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/gallery">Gallery</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
@@ -102,7 +102,7 @@
                     </div>
                     <div class="col-1 mt-auto d-none d-lg-block"><a class="scroll-indicator text-warning"
                             href="#footer">
-                            <span>SCROLL </span><img src="galeri/assets/img/icons/long-arrow.png" alt="" /></a>
+                            <span>SCROLL </span><img src="/galeri/assets/img/icons/long-arrow.png" alt="" /></a>
                     </div>
                     <div class="col-lg-7 position-relative">
                         <div class="position-relative overflow-hidden overflow-md-visible"><img class="img-fluid"
@@ -118,7 +118,7 @@
                                 majority have suffered alteration in some form, by injected humour,</p>
                         </div>
                         <div class="position-absolute start-0 bottom-0 d-lg-none"><a
-                                class="scroll-indicator text-warning" href="/home/footer"> <span>SCROLL
+                                class="scroll-indicator text-warning" href="#footer"> <span>SCROLL
                                 </span><img src="/galeri/assets/img/icons/long-arrow.png" alt="" /></a>
                         </div>
                     </div>
