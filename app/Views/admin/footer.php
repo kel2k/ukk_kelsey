@@ -24,6 +24,9 @@
 <!-- Custom js for this page -->
 <script src="/admin/assets/js/dashboard.js"></script>
 <!-- End custom js for this page -->
+<script src="/admin/assets/js/file-upload.js"></script>
+<script src="/admin/assets/js/typeahead.js"></script>
+<script src="/admin/assets/js/select2.js"></script>
 </body>
 
 </html>

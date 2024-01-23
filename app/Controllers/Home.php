@@ -37,6 +37,13 @@ class Home extends BaseController
         echo view('portofolio');
         echo view('footer');
     }
+    public function upload()
+    {
+        echo view('/admin/header');
+        // echo view('menu');
+        echo view('/admin/upload');
+        echo view('/admin/footer');
+    }
     public function gantipassword()
     {
 
