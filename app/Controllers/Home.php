@@ -9,16 +9,13 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Home extends BaseController
 {
-<<<<<<< HEAD
-    public function index()
-    {
-        echo view('/admin/header');
-        // echo view('/admin/menuutama');
-        echo view('/admin/login');
-        echo view('/admin/footer');
-    }
-=======
->>>>>>> f4d78453d5276ff25527f94049dc6da514791c41
+    // public function index()
+    // {
+    //     echo view('/admin/header');
+    //     // echo view('/admin/menuutama');
+    //     echo view('/admin/login');
+    //     echo view('/admin/footer');
+    // }
     public function dashboard()
     {
         echo view('header');
@@ -62,29 +59,29 @@ class Home extends BaseController
         $model->qedit('user', $data1, $where);
         return redirect()->to('/home/index/');
     }
-    public function aksi_login()
-    {
-        $u = $this->request->getPost('username');
-        $p = $this->request->getPost('password');
-        $model = new M_model();
-        $data = array(
-            'username' => $u,
-            'password' => md5($p)
-        );
-        $cek = $model->getWhere2('user', $data);
+    // public function aksi_login()
+    // {
+    //     $u = $this->request->getPost('username');
+    //     $p = $this->request->getPost('password');
+    //     $model = new M_model();
+    //     $data = array(
+    //         'username' => $u,
+    //         'password' => md5($p)
+    //     );
+    //     $cek = $model->getWhere2('user', $data);
 
-        if ($cek > 0) {
-            session()->set('id', $cek['id_user']);
-            session()->set('username', $cek['username']);
-            // session()->set('email', $cek['email']);
-            session()->set('level', $cek['level']);
-            return redirect()->to('/home/dashboard');
-        } else {
-            // Tambahkan kode berikut
-            session()->setFlashdata('error', 'Salah password');
-            return redirect()->to('/home/index');
-        }
-    }
+    //     if ($cek > 0) {
+    //         session()->set('id', $cek['id_user']);
+    //         session()->set('username', $cek['username']);
+    //         // session()->set('email', $cek['email']);
+    //         session()->set('level', $cek['level']);
+    //         return redirect()->to('/home/dashboard');
+    //     } else {
+    //         // Tambahkan kode berikut
+    //         session()->setFlashdata('error', 'Salah password');
+    //         return redirect()->to('/home/index');
+    //     }
+    // }
     public function user()
     {
         $model = new M_model();

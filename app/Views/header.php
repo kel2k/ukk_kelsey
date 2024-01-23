@@ -31,17 +31,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet">
-<<<<<<< HEAD
     <link href="<?= base_url('/galeri/vendors/prism/prism.css') ?>" rel="stylesheet">
     <link href="<?= base_url('/galeri/vendors/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('/galeri/assets/css/theme.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('/galeri/assets/css/user.css') ?>" rel="stylesheet">
     <link href="<?= base_url('/galeri/vendors/glightbox/glightbox.min.css') ?>" rel="stylesheet">
-=======
-    <link href="<?= base_url('vendors/prism/prism.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('vendors/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/theme.css') ?>" rel="stylesheet" />
-    <link href="<?= base_url('assets/css/user.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('vendors/glightbox/glightbox.min.css') ?>" rel="stylesheet">
->>>>>>> f4d78453d5276ff25527f94049dc6da514791c41
 </head>

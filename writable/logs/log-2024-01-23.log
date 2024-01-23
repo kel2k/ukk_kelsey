@@ -1,0 +1,52 @@
+CRITICAL - 2024-01-23 01:42:23 --> syntax error, unexpected token "<<", expecting "function" or "const"
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('home/dashboard', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('home/dashboard')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('home/dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Documents\\galeriphoto\\public\\index.php')
+ERROR - 2024-01-23 01:43:49 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gallery' in C:\Users\PC-7\Documents\galeriphoto\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\PC-7\Documents\galeriphoto\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'gallery', 3306, '', 0)
+#1 C:\Users\PC-7\Documents\galeriphoto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PC-7\Documents\galeriphoto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PC-7\Documents\galeriphoto\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PC-7\Documents\galeriphoto\app\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\PC-7\Documents\galeriphoto\app\Controllers\Home.php(71): App\Models\M_model->getWhere2('user', Array)
+#6 C:\Users\PC-7\Documents\galeriphoto\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#7 C:\Users\PC-7\Documents\galeriphoto\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PC-7\Documents\galeriphoto\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PC-7\Documents\galeriphoto\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PC-7\Documents\galeriphoto\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\D...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gallery' in C:\Users\PC-7\Documents\galeriphoto\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PC-7\Documents\galeriphoto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PC-7\Documents\galeriphoto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PC-7\Documents\galeriphoto\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PC-7\Documents\galeriphoto\app\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\Users\PC-7\Documents\galeriphoto\app\Controllers\Home.php(71): App\Models\M_model->getWhere2('user', Array)
+#5 C:\Users\PC-7\Documents\galeriphoto\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#6 C:\Users\PC-7\Documents\galeriphoto\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\PC-7\Documents\galeriphoto\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\PC-7\Documents\galeriphoto\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\PC-7\Documents\galeriphoto\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\D...')
+#10 {main}
+CRITICAL - 2024-01-23 01:43:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gallery'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\M_Model.php(31): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Home.php(71): App\Models\M_model->getWhere2('user', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Documents\\galeriphoto\\public\\index.php')
