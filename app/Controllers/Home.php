@@ -9,6 +9,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Home extends BaseController
 {
+<<<<<<< HEAD
     public function index()
     {
         echo view('/admin/header');
@@ -16,6 +17,8 @@ class Home extends BaseController
         echo view('/admin/login');
         echo view('/admin/footer');
     }
+=======
+>>>>>>> f4d78453d5276ff25527f94049dc6da514791c41
     public function dashboard()
     {
         echo view('header');
