@@ -30,7 +30,7 @@ class Home extends BaseController
         // $where2=array('id_post'=>$id);
         $data2 = array(
             'project_id' => $id,
-            'createdBy' => session()->get('id'),
+            'user_id' => session()->get('id'),
             'created_at' => date('Y-m-d H:i:s')
         );
 
@@ -46,7 +46,7 @@ class Home extends BaseController
         // $where2=array('id_post'=>$id);
         $data2 = array(
             'project_id' => $id,
-            'createdBy' => session()->get('id')
+            'user_id' => session()->get('id'),
         );
 
         // print_r($data2);
@@ -71,6 +71,15 @@ class Home extends BaseController
         echo view('footer');
     }
     public function portofolio()
+    {
+        $model = new M_model();
+        $data['projects'] = $model->tampil('photos');
+        echo view('header');
+        // echo view('menu');
+        echo view('portofolio', $data);
+        echo view('footer');
+    }
+    public function comment()
     {
         $model = new M_model();
         $data['projects'] = $model->tampil('photos');

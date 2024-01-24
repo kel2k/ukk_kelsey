@@ -178,4 +178,14 @@ class M_model extends Model
     {
         return $this->db->table('user')->countAll();
     }
+
+    public function getLike($id)
+    {
+        $query = $this->db->table('likes')
+            ->select('*')
+            ->where("project_id", $id)
+            ->where("user_id", session()->get('id'));
+
+        return $query->get()->getResult();
+    }
 }

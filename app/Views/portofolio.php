@@ -19,6 +19,11 @@
   <!-- ===============================================-->
   <title>Portfolio | Selected Works</title>
 
+  <?php
+  use App\Models\M_model;
+
+  $model = new M_model();
+  ?>
 
 <body>
 
@@ -110,6 +115,10 @@
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
+
+
+
+
     <section class="py-3">
 
       <div class="container-fluid px-0">
@@ -121,6 +130,14 @@
                 data-swiper='{"slidesPerView":1,"breakpoints":{"576":{"slidesPerView":1.2}},"spaceBetween":30,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"loopedSlides":3,"slideToClickedSlide":true}'>
                 <div class="swiper-wrapper">
                   <?php foreach ($projects as $project): ?>
+
+                    <?php
+                    $id = $project->id_photos;
+                    $like = $model->getLike($id);
+                    // print_r($like);
+                  
+                    // $com = $model->getComment($id);
+                    ?>
                     <div class="swiper-slide">
                       <div class="row align-items-start"> <!-- Use align-items-start to align items at the top -->
                         <div class="col-xl-7">
@@ -141,10 +158,24 @@
                           <p class="fs-0">
                             <?= $project->description ?>
                           <div class="d-flex gap-3 mt-3">
-                            <button class="btn btn-primary btn-like" data-project-id="1" onclick="likeProject(1)">
-                              <i class="fas fa-thumbs-up"></i>
-                              <span class="like-count" data-like-count="0"></span>
-                            </button>
+
+                            <?php if ($like != null) { ?>
+                              <a href="<?= base_url('/Home/dislike/' . $project->id_photos) ?>">
+                                <button class="btn btn-danger btn-like" data-project-id="1" onclick="likeProject(1)">
+                                  <i class="fas fa-thumbs-up"></i>
+                                  <span class="like-count" data-like-count="0"></span>
+                                </button>
+                              </a>
+                            <?php } else { ?>
+                              <a href="<?= base_url('/Home/like/' . $project->id_photos) ?>">
+                                <button class="btn btn-primary btn-like" data-project-id="1" onclick="likeProject(1)">
+                                  <i class="fas fa-thumbs-up"></i>
+                                  <span class="like-count" data-like-count="0"></span>
+                                </button>
+                              </a>
+                            <?php } ?>
+
+
 
                             <button class="btn btn-secondary" onclick="commentProject(<?= $project->id ?>)">
                               <i class="fas fa-comment"></i> Comment
