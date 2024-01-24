@@ -24,6 +24,36 @@ class Home extends BaseController
         echo view('test');
         echo view('footer');
     }
+    public function like($id)
+    {
+        $model = new M_Model();
+        // $where2=array('id_post'=>$id);
+        $data2 = array(
+            'project_id' => $id,
+            'createdBy' => session()->get('id'),
+            'created_at' => date('Y-m-d H:i:s')
+        );
+
+        // print_r($data2);
+        $model->simpan('likes', $data2);
+
+        return redirect()->to('/Home/portofolio/' . $id);
+    }
+
+    public function dislike($id)
+    {
+        $model = new M_Model();
+        // $where2=array('id_post'=>$id);
+        $data2 = array(
+            'project_id' => $id,
+            'createdBy' => session()->get('id')
+        );
+
+        // print_r($data2);
+        $model->hapus('likes', $data2);
+
+        return redirect()->to('/Home/portofolio/' . $id);
+    }
     public function dashboard()
     {
         echo view('header');
