@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2024 at 02:52 AM
+-- Generation Time: Jan 24, 2024 at 05:13 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -61,9 +61,9 @@ INSERT INTO `level` (`id_level`, `nama_level`) VALUES
 
 CREATE TABLE `likes` (
   `id` int(11) NOT NULL,
-  `photo_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `created_at` datetime NOT NULL
+  `project_id` int(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -73,13 +73,26 @@ CREATE TABLE `likes` (
 --
 
 CREATE TABLE `photos` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `id_photos` int(11) NOT NULL,
   `description` text NOT NULL,
   `image` varchar(255) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `like_status` int(10) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
+  `createdBy` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`id_photos`, `description`, `image`, `category`, `like_status`, `created_at`, `createdBy`) VALUES
+(8, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1.png', 'Commercial', 0, '2024-01-23 11:05:00', 0),
+(11, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706008375_2e5d2304f2772d397b72.png', 'Professional', 0, '2024-01-23 11:12:55', 0),
+(12, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706009667_40abc3eb712abef6079d.png', 'Professional', 0, '2024-01-23 11:34:27', 0),
+(13, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706011224_006b01c75425a39b5a0a.png', 'ShortFilms', 0, '2024-01-23 12:00:24', 0),
+(14, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706011243_17779de28d340a372360.png', 'ShortFilms', 0, '2024-01-23 12:00:43', 0),
+(15, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706011669_63b4cdfe5f78807d9612.png', 'Professional', 0, '2024-01-23 12:07:49', 0);
 
 -- --------------------------------------------------------
 
@@ -93,16 +106,18 @@ CREATE TABLE `user` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `level` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
+  `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'johndoe@example.com', 'e3afed0047b08059d0fada10f400c1e5', '1', '2023-07-20 00:00:00', '2023-07-20 00:00:00');
+INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `level`, `created_at`) VALUES
+(1, 'Admin', 'johndoe@example.com', 'e3afed0047b08059d0fada10f400c1e5', '1', '2023-07-20 00:00:00'),
+(5, 'asd', 'asd@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2024-01-23 14:50:36'),
+(6, 'asd', 'Yandagaming123@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2024-01-23 14:52:53'),
+(7, '', '', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2024-01-23 14:54:31');
 
 --
 -- Indexes for dumped tables
@@ -130,7 +145,7 @@ ALTER TABLE `likes`
 -- Indexes for table `photos`
 --
 ALTER TABLE `photos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_photos`);
 
 --
 -- Indexes for table `user`
@@ -158,19 +173,19 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_photos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
