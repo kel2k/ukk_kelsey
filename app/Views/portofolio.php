@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -105,10 +106,13 @@
     </nav>
 
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
     <section class="py-3">
     <div class="container-fluid px-0">
+        <?php 
+        use App\Models\M_model;
+        $model = new M_model;
+        ?>
+
         <div class="position-absolute w-100 border-dashed-bottom opacity-25 top-5 z-index-1"></div>
         <div class="container px-md-5">
             <div class="row g-0">
@@ -129,22 +133,34 @@
                                                     alt="" />
                                             </div>
                                         </div>
-          <!-- ... Bagian lain dari HTML ... -->
 
-<div class="col-xl-4 mt-4">
-    <p class="fs-0 description-column" style="margin-left: -15px; margin-right: -15px;">
-        <?= $project->description ?>
-    </p>
-    <div class="d-flex gap-3 mt-3">
-        <button class="btn btn-primary btn-like" data-project-id="1" onclick="likeProject(1)">
-            <i class="fas fa-thumbs-up"></i>
-            <span class="like-count" data-like-count="0"></span>
-        </button>
-    </div>
-</div>
+                                        <div class="col-xl-4 mt-4">
+                                            <p class="fs-0 description-column" style="margin-left: -15px; margin-right: -15px;">
+                                                <?= $project->description ?>
+                                            </p>
+                                        </div>
 
-<!-- ... Bagian lain dari HTML ... -->
-
+                                        <div class="col-lg-9 col-12 mt-3">
+                                            <div class="custom-block-info">
+                                                <div class="custom-block-top d-flex mb-1">
+                                                    <?php 
+                                                    $id_photos = $project->id_photos;
+                                                    $like = $model->getLike($id_photos);
+                                                    ?>
+                                                    <?php if($like != null): ?>
+                                                        <a class="badge" style="background-color: red;" href="<?= base_url('/Home/dislike/'.$id_photos) ?>">
+                                                            <i class="bi-heart"></i>
+                                                            Dislike
+                                                        </a>
+                                                    <?php else: ?>
+                                                        <a class="badge" style="background-color: blue;" href="<?= base_url('/Home/like/'.$id_photos) ?>">
+                                                            <i class="bi-heart"></i>
+                                                            Like
+                                                        </a>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -155,5 +171,5 @@
             </div>
         </div>
     </div>
-    <!-- end of .container-->
 </section>
+

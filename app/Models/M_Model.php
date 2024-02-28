@@ -21,13 +21,14 @@ class M_model extends Model
 		->delete();
 	}
 
-	public function getLikeCount($gambarId)
-	{
-		return $this->db->table('like')
-		->where('gambar', $gambarId)
-		->countAllResults();
-	}
-
+    public function getLike($id){
+        $query = $this->db->table('like')
+            ->select('*')
+            ->where("like.post =", $id)
+            ->where("like.createdBy =", session()->get('id_user'));
+        
+            return $query->get()->getResult();
+    }
     public function tampil($table)
     {
         return $this->db->table($table)->get()->getResult();
@@ -200,26 +201,5 @@ class M_model extends Model
     public function getTotalUsers()
     {
         return $this->db->table('user')->countAll();
-    }
-
-    public function getLike($id, $userId)
-    {
-        $query = $this->db->table('likes')
-            ->select('*')
-            ->where("project_id", $id)
-            ->where("user_id", $userId);
-    
-        $result = $query->get();
-    
-        if (!$result) {
-            // Log or print the last query and error
-            $lastQuery = $this->db->getLastQuery();
-            $lastError = $this->db->error();
-            echo "Last Query: $lastQuery<br>";
-            echo "Error: {$lastError['message']}<br>";
-            die(); // or handle the error accordingly
-        }
-    
-        return $result->getResult();
     }
 }

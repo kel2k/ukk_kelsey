@@ -24,36 +24,34 @@ class Home extends BaseController
         echo view('test');
         echo view('footer');
     }
-    public function like($id)
-    {
-        $model = new M_Model();
-        // $where2=array('id_post'=>$id);
-        $data2 = array(
-            'project_id' => $id,
-            'user_id' => session()->get('id'),
-            'created_at' => date('Y-m-d H:i:s')
-        );
+    public function like($id){
+		$model = new M_Model();
+		// $where2=array('id_post'=>$id);
+		$data2 = array(
+			'post' => $id,
+			'createdBy' => session()->get('id_user'),
+			'created_at' => date('Y-m-d H:i:s')
+		);
+		
+		// print_r($data2);
+		$model->simpan('like', $data2);
 
-        // print_r($data2);
-        $model->simpan('likes', $data2);
+		return redirect()->to ('/Home/portofolio/'.$id);
+	}
+	
+	public function dislike($id){
+		$model = new M_Model();
+		// $where2=array('id_post'=>$id);
+		$data2 = array(
+			'post' => $id,
+			'createdBy' => session()->get('id_user')
+		);
+		
+		// print_r($data2);
+		$model->hapus('like', $data2);
 
-        return redirect()->to('/Home/portofolio/' . $id);
-    }
-
-    public function dislike($id)
-    {
-        $model = new M_Model();
-        // $where2=array('id_post'=>$id);
-        $data2 = array(
-            'project_id' => $id,
-            'user_id' => session()->get('id'),
-        );
-
-        // print_r($data2);
-        $model->hapus('likes', $data2);
-
-        return redirect()->to('/Home/portofolio/' . $id);
-    }
+		return redirect()->to ('/Home/portofolio/'.$id);
+	}
     public function dashboard()
     {
         if (session()->get('level')==1) {
@@ -153,14 +151,15 @@ class Home extends BaseController
 
         $user = array(
             'username' => $username,
-            'password' => md5('password'),
+            'password' => md5($password),
             'email' => $email,
             'level' => '1',
             'created_at' => date('Y-m-d H:i:s')
         );
         $model = new M_model();
-        $model->simpan('user', $user);
-        return redirect()->to('/home');
+        print_r($user);
+        // $model->simpan('user', $user);
+        // return redirect()->to('/home');
     }
     public function aksi_upload()
 {
