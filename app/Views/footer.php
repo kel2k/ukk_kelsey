@@ -22,7 +22,7 @@
                             class="fw-thin">gency</span></a></div>
                 <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-map-marker-alt"></i><a
                         class="nav-link text-300 d-inline"
-                        href="https://www.google.com/maps/place/2109+WS+09+Oxford+Rd+%23127+ParkVilla+Hills,+">Sekolah
+                        href="https://maps.app.goo.gl/C7VA145zmKxPWfSbA">Sekolah
                         Permata Harapan</a></div>
                 <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-phone"></i><a
                         class="nav-link text-300 d-inline" href="tel:+8801976476893">+62 878 80330890</a></div>

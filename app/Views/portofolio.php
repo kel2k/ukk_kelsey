@@ -34,7 +34,7 @@
                 href="index.html"><img class="img-fluid" src="/galeri/assets/img/icons/logo-icon.png" alt="" /><span
                   class="fw-bolder ms-2">Foto</span><span class="fw-thin">gency</span></a></div>
             <div class="mt-4 d-none d-lg-block">
-              <h1 class="text-uppercase fs-lg-7 fs-5 fw-bolder text-300 lh-1 position-relative z-index-0">Portfolio</h1>
+              <h1 class="text-uppercase fs-lg-7 fs-5 fw-bolder text-300 lh-1 position-relative z-index-0"></h1>
               <h1
                 class="d-none d-md-block fw-bolder text-outlined fs-7 text-white lh-1 mt-n4 position-relative z-index--1">
                 Selected Works</h1>
@@ -58,13 +58,12 @@
                   <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
                       aria-current="page" href="/home/dashboard">Home</a></li>
                   <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5 active"
-                      aria-current="page" href="/home/portofolio">Portfolio</a></li>
+                      aria-current="page" href="/home/portofolio">Postingan</a></li>
                   <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
                       aria-current="page" href="/home/gallery">Gallery</a></li>
                   <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
                       aria-current="page" href="exhibitions.html">Exhibitions</a></li>
-                  <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
-                      aria-current="page" href="about.html">About</a></li>
+         
                   <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
                       aria-current="page" href="blog.html">Blog</a></li>
                 </ul>
@@ -82,13 +81,12 @@
                   <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page"
                       href="/home/dashboard">Home</a></li>
                   <li class="nav-item px-2 position-relative"><a class="nav-link pt-0 active" aria-current="page"
-                      href="/home/portofolio">Portfolio</a></li>
+                      href="/home/portofolio">Postingan</a></li>
                   <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page"
                       href="/home/gallery">Gallery</a></li>
                   <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page"
                       href="/home/upload">Upload Images</a></li>
-                  <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page"
-                      href="about.html">About</a></li>
+             
                   <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page"
                       href="/home/logout">Logout</a></li>
                 </ul>

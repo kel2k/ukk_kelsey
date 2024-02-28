@@ -56,11 +56,16 @@ class Home extends BaseController
     }
     public function dashboard()
     {
+        if (session()->get('level')==1) {
         echo view('header');
         // echo view('menu');
         echo view('dashboard');
         echo view('footer');
-    }
+    
+} else {
+    return redirect()->to('/home');
+}
+}
     public function gallery()
     {
         $model = new M_model();

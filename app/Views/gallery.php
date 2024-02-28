@@ -88,15 +88,16 @@
                         <div class="offcanvas-body px-0">
                             <div class="d-lg-flex flex-center-start gap-3 overflow-hidden">
                                 <ul class="navbar-nav ms-auto fs-4 ps-6">
-                                    <li class="nav-item"><a
-                                            class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
-                                            aria-current="page" href="/home/dashboard">Home</a></li>
-                                    <li class="nav-item"><a
-                                            class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
-                                            aria-current="page" href="/home/portofolio">Portfolio</a></li>
-                                    <li class="nav-item"><a
-                                            class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
-                                            aria-current="page" href="/home/gallery">GALLERY</a></li>
+                                <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                      aria-current="page" href="/home/dashboard">Home</a></li>
+                      <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                      aria-current="page" href="/home/portofolio">Postingan</a></li>
+                      <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5 active"
+                      aria-current="page" href="/home/gallery">Gallery</a></li>
+                  <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                      aria-current="page" href="/home/upload">Upload Photo</a></li>
+                  <li class="nav-item"><a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                      aria-current="page" href="/home/logout">Logout</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -114,13 +115,12 @@
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/dashboard">Home</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="/home/portofolio">Portofolio</a></li>
+                                            aria-current="page" href="/home/portofolio">Postingan</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0 active"
                                             aria-current="page" href="/home/gallery">Gallery</a></li>
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/upload">Upload Images</a></li>
-                                    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
-                                            aria-current="page" href="#">About</a></li>
+                           
                                     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0"
                                             aria-current="page" href="/home/logout">Logout</a></li>
                                 </ul>
