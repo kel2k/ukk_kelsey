@@ -3,8 +3,7 @@
 
 <style>
   .description-column {
-    margin-top: 0;
-    /* Adjust this value to control the spacing between the image and description */
+    padding: 0 1px; /* Sesuaikan nilai ini sesuai dengan kebutuhan jarak kanan dan kiri */
   }
 </style>
 
@@ -19,11 +18,6 @@
   <!-- ===============================================-->
   <title>Portfolio | Selected Works</title>
 
-  <?php
-  use App\Models\M_model;
-
-  $model = new M_model();
-  ?>
 
 <body>
 
@@ -115,93 +109,53 @@
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-
-
-
-
     <section class="py-3">
-
-      <div class="container-fluid px-0">
+    <div class="container-fluid px-0">
         <div class="position-absolute w-100 border-dashed-bottom opacity-25 top-5 z-index-1"></div>
         <div class="container px-md-5">
-          <div class="row g-0">
-            <div class="col-lg-12 pb-6 px-0 mb-lg-0">
-              <div class="swiper-container swiper-theme"
-                data-swiper='{"slidesPerView":1,"breakpoints":{"576":{"slidesPerView":1.2}},"spaceBetween":30,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"loopedSlides":3,"slideToClickedSlide":true}'>
-                <div class="swiper-wrapper">
-                  <?php foreach ($projects as $project): ?>
+            <div class="row g-0">
+                <div class="col-lg-12 pb-6 px-0 mb-lg-0">
+                    <div class="swiper-container swiper-theme"
+                        data-swiper='{"slidesPerView":1,"breakpoints":{"576":{"slidesPerView":1.2}},"spaceBetween":30,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"loopedSlides":3,"slideToClickedSlide":true}'>
+                        <div class="swiper-wrapper">
+                            <?php foreach ($projects as $project): ?>
+                                <div class="swiper-slide">
+                                    <div class="row align-items-start">
+                                        <div class="col-xl-7">
+                                            <div class="position-relative">
+                                                <div class="position-absolute start-0 top-0 ms-3">
+                                                    <h5 class="text-white"><?= $project->created_at ?></h5>
+                                                </div>
+                                                <img class="portfolio-img img-fluid"
+                                                    src="<?= base_url('assets/images/' . $project->image) ?>"
+                                                    alt="" />
+                                            </div>
+                                        </div>
+          <!-- ... Bagian lain dari HTML ... -->
 
-                    <?php
-                    $id = $project->id_photos;
-                    $like = $model->getLike($id);
-                    // print_r($like);
-                  
-                    // $com = $model->getComment($id);
-                    ?>
-                    <div class="swiper-slide">
-                      <div class="row align-items-start"> <!-- Use align-items-start to align items at the top -->
-                        <div class="col-xl-7">
-                          <div class="position-relative">
-                            <div class="position-absolute start-0 top-0 ms-3"> <!-- Use top-0 to position at the top -->
-                              <h3 class="text-white">
-                                <?= $project->title ?>
-                              </h3>
-                              <p class="text-300">
-                                <?= $project->subtitle ?>
-                              </p>
-                            </div>
-                            <img class="portfolio-img img-fluid" src="<?= base_url('assets/images/' . $project->image) ?>"
-                              alt="" />
-                          </div>
+<div class="col-xl-4 mt-4">
+    <p class="fs-0 description-column" style="margin-left: -15px; margin-right: -15px;">
+        <?= $project->description ?>
+    </p>
+    <div class="d-flex gap-3 mt-3">
+        <button class="btn btn-primary btn-like" data-project-id="1" onclick="likeProject(1)">
+            <i class="fas fa-thumbs-up"></i>
+            <span class="like-count" data-like-count="0"></span>
+        </button>
+    </div>
+</div>
+
+<!-- ... Bagian lain dari HTML ... -->
+
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="col-xl-4 mt-4">
-                          <p class="fs-0">
-                            <?= $project->description ?>
-                          <div class="d-flex gap-3 mt-3">
-
-                            <?php if ($like != null) { ?>
-                              <a href="<?= base_url('/Home/dislike/' . $project->id_photos) ?>">
-                                <button class="btn btn-danger btn-like" data-project-id="1" onclick="likeProject(1)">
-                                  <i class="fas fa-thumbs-up"></i>
-                                  <span class="like-count" data-like-count="0"></span>
-                                </button>
-                              </a>
-                            <?php } else { ?>
-                              <a href="<?= base_url('/Home/like/' . $project->id_photos) ?>">
-                                <button class="btn btn-primary btn-like" data-project-id="1" onclick="likeProject(1)">
-                                  <i class="fas fa-thumbs-up"></i>
-                                  <span class="like-count" data-like-count="0"></span>
-                                </button>
-                              </a>
-                            <?php } ?>
-
-
-
-                            <button class="btn btn-secondary" onclick="commentProject(<?= $project->id ?>)">
-                              <i class="fas fa-comment"></i> Comment
-                            </button>
-                          </div>
-                          </p>
-                        </div>
-                      </div>
                     </div>
-                  <?php endforeach; ?>
-
+                    <div class="swiper-theme swiper-pagination d-flex mt-4"></div>
                 </div>
-              </div>
-              <div class="swiper-theme swiper-pagination d-flex mt-4"></div>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-  </main>
-  <!-- ===============================================-->
-  <!--    End of Main Content-->
-  <!-- ===============================================-->
+    </div>
+    <!-- end of .container-->
+</section>

@@ -15,8 +15,9 @@
         "ext-json": "*",
         "ext-mbstring": "*",
         "dompdf/dompdf": "^2.0",
-        "intervention/image": "^2.7",
+        "intervention/image": "2.7",
         "laminas/laminas-escaper": "^2.9",
+        "monolog/monolog": "^2.9",
         "phpoffice/phpspreadsheet": "^1.29",
         "psr/log": "^1.1"
     },

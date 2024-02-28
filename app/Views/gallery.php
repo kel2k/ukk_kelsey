@@ -144,9 +144,9 @@
                         <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav active filter-link" href="#!"
                                 data-filter="*">All</a></li>
                         <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
-                                data-filter=".shortfilms">Short films</a></li>
+                                data-filter=".shortfilms">Pemandangan</a></li>
                         <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
-                                data-filter=".professional">Professional</a></li>
+                                data-filter=".professional">Foto Pribadi</a></li>
                         <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
                                 data-filter=".commercial">Commercial</a></li>
 
@@ -156,17 +156,28 @@
 
                 </div>
                 <div class="row g-3" data-isotope='{"layoutMode":"packery"}'>
-                    <?php foreach ($galeri as $gallery): ?>
-                        <div class="col-lg-3 col-sm-6 col-12 <?= strtolower($gallery->category) ?> gallery-item isotope-item <?php if (empty($gallery->image))
-                               echo 'empty-gallery-item'; ?>" data-category="<?= $gallery->category ?>">
-                            <?php if (!empty($gallery->image)): ?>
-                                <img class="portfolio-img img-fluid" src="<?= base_url('assets/images/' . $gallery->image) ?>"
-                                    alt=""
-                                    data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
-                            <?php endif; ?>
-                            <p>Category:
-                                <?= $gallery->category ?>
-                            </p>
-                        </div>
+    <?php foreach ($galeri as $gallery): ?>
+        <div class="col-lg-3 col-sm-6 col-12 <?= strtolower($gallery['category']) ?> gallery-item isotope-item <?php if (empty($gallery['image'])) echo 'empty-gallery-item'; ?>" data-category="<?= $gallery['category'] ?>">
+            <?php if (!empty($gallery['image'])): ?>
+                <div class="position-relative mb-3">
+                    <img class="portfolio-img img-fluid" src="<?= base_url('assets/images/' . $gallery['image']) ?>"
+                        alt=""
+                        data-glightbox="title: To infinity and beyond; description: Iching biching chiching" />
+                    <button class="btn btn-danger position-absolute bottom-0 start-50 translate-middle-x mb-3"
+                        onclick="confirmDelete(<?= $gallery['id_photos'] ?>)"
+                        data-toggle="tooltip" data-placement="bottom" title="Delete Photo">
+                        <i class="bi bi-trash-fill"></i> Delete
+                    </button>
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php endforeach; ?>
+</div>
 
-                    <?php endforeach; ?>
+<script>
+    function confirmDelete(id) {
+        if (confirm("Are you sure you want to delete this photo?")) {
+            window.location.href = "<?= base_url('home/hapus/') ?>" + id;
+        }
+    }
+</script>

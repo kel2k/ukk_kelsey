@@ -5,6 +5,29 @@ use CodeIgniter\Model;
 
 class M_model extends Model
 {
+    protected $table = 'photos';
+    
+    public function isLiked($idGambar, $idUser)
+	{
+		return $this->db->table('like')
+		->where(['gambar' => $idGambar, 'user' => $idUser])
+		->countAllResults() > 0;
+	}
+
+	public function hapusLike($idGambar, $idUser)
+	{
+		return $this->db->table('like')
+		->where(['gambar' => $idGambar, 'user' => $idUser])
+		->delete();
+	}
+
+	public function getLikeCount($gambarId)
+	{
+		return $this->db->table('like')
+		->where('gambar', $gambarId)
+		->countAllResults();
+	}
+
     public function tampil($table)
     {
         return $this->db->table($table)->get()->getResult();
@@ -179,13 +202,24 @@ class M_model extends Model
         return $this->db->table('user')->countAll();
     }
 
-    public function getLike($id)
+    public function getLike($id, $userId)
     {
         $query = $this->db->table('likes')
             ->select('*')
             ->where("project_id", $id)
-            ->where("user_id", session()->get('id'));
-
-        return $query->get()->getResult();
+            ->where("user_id", $userId);
+    
+        $result = $query->get();
+    
+        if (!$result) {
+            // Log or print the last query and error
+            $lastQuery = $this->db->getLastQuery();
+            $lastError = $this->db->error();
+            echo "Last Query: $lastQuery<br>";
+            echo "Error: {$lastError['message']}<br>";
+            die(); // or handle the error accordingly
+        }
+    
+        return $result->getResult();
     }
 }

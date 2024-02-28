@@ -120,8 +120,8 @@
                 <div class="form-group">
                     <label for="category">Choose Category:</label>
                     <select class="form-control" id="category" name="category" required>
-                        <option value="Shortfilms">Short Films</option>
-                        <option value="Professional">Professional</option>
+                        <option value="Shortfilms">Pemandangan</option>
+                        <option value="Professional">Foto Pribadi</option>
                         <option value="Commercial">Commercial</option>
                     </select>
                 </div>

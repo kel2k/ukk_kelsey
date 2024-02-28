@@ -64,12 +64,16 @@ class Home extends BaseController
     public function gallery()
     {
         $model = new M_model();
-        $data['galeri'] = $model->tampil('photos');
+        $id_user = session()->get('id_user');
+        
+        // Fetch photos based on user_id directly from the 'photos' table
+        $data['galeri'] = $model->where('user_id', $id_user)->findAll();
+        
         echo view('header');
-        // echo view('menu');
         echo view('gallery', $data);
         echo view('footer');
     }
+    
     public function portofolio()
     {
         $model = new M_model();
@@ -154,58 +158,62 @@ class Home extends BaseController
         return redirect()->to('/home');
     }
     public function aksi_upload()
-    {
-        $description = $this->request->getPost('description');
-        $category = $this->request->getPost('category');
+{
+    $description = $this->request->getPost('description');
+    $category = $this->request->getPost('category');
+    $user_id = session()->get('id_user');
 
-        $imageFile = $this->request->getFile('image');
-        if ($imageFile->isValid() && !$imageFile->hasMoved()) {
-            $imageName = $imageFile->getRandomName();
-            $imageFile->move('assets/images/', $imageName);
+    $imageFile = $this->request->getFile('image');
+    
+    if ($imageFile->isValid() && !$imageFile->hasMoved()) {
+        $imageName = $imageFile->getRandomName();
+        $imageFile->move('assets/images/', $imageName);
 
-            // Gunakan Intervention Image untuk mengubah ukuran gambar
-            $img = Image::make('assets/images/' . $imageName);
-            $img->resize(355, 465);
-            $img->save('assets/images/' . $imageName);
-        } else {
-            $imageName = 'default.jpg';
-        }
-
-        $data = [
-            'description' => $description,
-            'image' => $imageName,
-            'category' => $category,
-            'created_at' => date('Y-m-d H:i:s')
-        ];
-
-        $model = new M_model();
-        $model->simpan('photos', $data);
-
-        return redirect()->to('/home/portofolio');
+        // Use Intervention Image to resize the image
+        $img = Image::make('assets/images/' . $imageName);
+        $img->resize(355, 465);
+        $img->save('assets/images/' . $imageName);
+    } else {
+        $imageName = 'default.jpg';
     }
-    public function aksi_login()
-    {
-        $u = $this->request->getPost('username');
-        $p = $this->request->getPost('password');
-        $model = new M_model();
-        $data = array(
-            'username' => $u,
-            'password' => md5($p)
-        );
-        $cek = $model->getWhere2('user', $data);
 
-        if ($cek > 0) {
-            session()->set('id', $cek['id_user']);
-            session()->set('username', $cek['username']);
-            // session()->set('email', $cek['email']);
-            session()->set('level', $cek['level']);
-            return redirect()->to('/home/dashboard');
-        } else {
-            // Tambahkan kode berikut
-            session()->setFlashdata('error', 'Salah password');
-            return redirect()->to('/home/index');
-        }
+    $data = [
+        'user_id' => $user_id, // Assign user_id to the logged-in user's id
+        'description' => $description,
+        'image' => $imageName,
+        'category' => $category,
+        'created_at' => date('Y-m-d H:i:s')
+    ];
+
+    $model = new M_model();
+    $model->simpan('photos', $data);
+    
+    return redirect()->to('/home/portofolio');
+}
+
+public function aksi_login()
+{
+    $u = $this->request->getPost('username');
+    $p = $this->request->getPost('password');
+    $model = new M_model();
+    $data = array(
+        'username' => $u,
+        'password' => md5($p)
+    );
+    $cek = $model->getWhere2('user', $data);
+
+    if ($cek > 0) {
+        session()->set('id_user', $cek['id_user']);
+        session()->set('username', $cek['username']);
+        // session()->set('email', $cek['email']);
+        session()->set('level', $cek['level']);
+        return redirect()->to('/home/dashboard');
+    } else {
+        // Tambahkan kode berikut
+        session()->setFlashdata('error', 'Salah password');
+        return redirect()->to('/home/index');
     }
+}
     public function user()
     {
         $model = new M_model();
@@ -217,5 +225,41 @@ class Home extends BaseController
         echo view('menu');
         echo view('tabel_user', $data);
         echo view('footer');
+    }
+    public function hapus($id)
+    {
+        $model = new M_model();
+
+        // Kondisi untuk menghapus data dari tabel 'anggota'
+        $where1 = array('id_photos' => $id);
+   
+        $model->hapus('photos', $where1);
+
+        return redirect()->to(base_url('/home/gallery'));
+    }
+    public function aksi_like($id)
+    { 
+        if(session()->get('level')==1) {
+            $model = new M_galeri();
+
+            $idUser = session()->get('id_user');
+
+            // Periksa apakah user sudah memberikan like atau belum
+            if (!$model->isLiked($id, $idUser)) {
+            // Jika belum, lakukan like
+                $data1 = array(
+                    'gambar' => $id,
+                    'user' => $idUser
+                );
+                $model->simpan('like', $data1);
+            } else {
+            // Jika sudah, lakukan unlike
+                $model->hapusLike($id, $idUser);
+            }
+
+            return redirect()->to('home/portofolio/'. $id);
+        } else {
+            return redirect()->to('login');
+        }
     }
 }

@@ -1,0 +1,30 @@
+ERROR - 2024-02-27 02:50:38 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in C:\Users\PC-7\Desktop\galeriphoto\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PC-7\Desktop\galeriphoto\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\PC-7\Desktop\galeriphoto\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\PC-7\Desktop\galeriphoto\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\PC-7\Desktop\galeriphoto\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PC-7\Desktop\galeriphoto\app\Models\M_Model.php(189): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PC-7\Desktop\galeriphoto\app\Views\portofolio.php(136): App\Models\M_model->getLike('8')
+#6 C:\Users\PC-7\Desktop\galeriphoto\system\View\View.php(226): include('C:\\Users\\PC-7\\D...')
+#7 C:\Users\PC-7\Desktop\galeriphoto\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\Users\PC-7\Desktop\galeriphoto\system\Common.php(1188): CodeIgniter\View\View->render('portofolio', Array, true)
+#9 C:\Users\PC-7\Desktop\galeriphoto\app\Controllers\Home.php(79): view('portofolio', Array)
+#10 C:\Users\PC-7\Desktop\galeriphoto\system\CodeIgniter.php(919): App\Controllers\Home->portofolio()
+#11 C:\Users\PC-7\Desktop\galeriphoto\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\Users\PC-7\Desktop\galeriphoto\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\PC-7\Desktop\galeriphoto\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\PC-7\Desktop\galeriphoto\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\D...')
+#15 {main}
+CRITICAL - 2024-02-27 02:50:38 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_Model.php on line 189.
+ 1 APPPATH\Views\portofolio.php(136): App\Models\M_model->getLike('8')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\PC-7\\Desktop\\galeriphoto\\app\\Views\\portofolio.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('portofolio', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('portofolio', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->portofolio()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\galeriphoto\\public\\index.php')
