@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2024 at 05:13 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Feb 28, 2024 at 09:24 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `comments` (
   `user_id` int(11) NOT NULL,
   `comment` text NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -44,7 +44,7 @@ CREATE TABLE `comments` (
 CREATE TABLE `level` (
   `id_level` int(11) NOT NULL,
   `nama_level` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `level`
@@ -56,15 +56,22 @@ INSERT INTO `level` (`id_level`, `nama_level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `likes`
+-- Table structure for table `like`
 --
 
-CREATE TABLE `likes` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `project_id` int(10) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `like` (
+  `id_like` int(11) NOT NULL,
+  `gambar` int(10) NOT NULL,
+  `user` int(10) NOT NULL,
+  `status` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `like`
+--
+
+INSERT INTO `like` (`id_like`, `gambar`, `user`, `status`) VALUES
+(3, 26, 6, '');
 
 -- --------------------------------------------------------
 
@@ -74,25 +81,22 @@ CREATE TABLE `likes` (
 
 CREATE TABLE `photos` (
   `id_photos` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `description` text NOT NULL,
   `image` varchar(255) NOT NULL,
   `category` varchar(100) NOT NULL,
   `like_status` int(10) NOT NULL,
-  `created_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `createdBy` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `photos`
 --
 
-INSERT INTO `photos` (`id_photos`, `description`, `image`, `category`, `like_status`, `created_at`, `createdBy`) VALUES
-(8, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1.png', 'Commercial', 0, '2024-01-23 11:05:00', 0),
-(11, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706008375_2e5d2304f2772d397b72.png', 'Professional', 0, '2024-01-23 11:12:55', 0),
-(12, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706009667_40abc3eb712abef6079d.png', 'Professional', 0, '2024-01-23 11:34:27', 0),
-(13, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706011224_006b01c75425a39b5a0a.png', 'ShortFilms', 0, '2024-01-23 12:00:24', 0),
-(14, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706011243_17779de28d340a372360.png', 'ShortFilms', 0, '2024-01-23 12:00:43', 0),
-(15, 'I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.', '1706011669_63b4cdfe5f78807d9612.png', 'Professional', 0, '2024-01-23 12:07:49', 0);
+INSERT INTO `photos` (`id_photos`, `user_id`, `description`, `image`, `category`, `like_status`, `created_at`, `createdBy`) VALUES
+(26, 6, '\"Berhenti sejenak dan nikmati keindahan alam. 🏞️✨ Terpesona dengan panorama yang memukau, memberikan kedamaian dan keindahan tak tergantikan. #PemandanganIndah #AlamDunia #MomentSpesial\"', '1709092816_20147cf8807bed3ecd1f.png', 'Shortfilms', 0, '2024-02-28 11:00:16', 0),
+(27, 6, '\"Menangkap momen kecil yang penuh keindahan. 📸✨ Merayakan keunikan diri dan merasakan setiap detik. #SelfieSunday #MeTime #SenyumSeindahHidup\"', '1709093963_2a1e62dc4d0087366803.jpg', 'Professional', 0, '2024-02-28 11:19:23', 0);
 
 -- --------------------------------------------------------
 
@@ -107,17 +111,15 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `level` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `level`, `created_at`) VALUES
-(1, 'Admin', 'johndoe@example.com', 'e3afed0047b08059d0fada10f400c1e5', '1', '2023-07-20 00:00:00'),
-(5, 'asd', 'asd@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2024-01-23 14:50:36'),
-(6, 'asd', 'Yandagaming123@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2024-01-23 14:52:53'),
-(7, '', '', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2024-01-23 14:54:31');
+(1, 'Admin', 'johndoe@example.com', 'c4ca4238a0b923820dcc509a6f75849b', '1', '2023-07-20 00:00:00'),
+(6, 'asd', 'Yandagaming123@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '1', '2024-01-23 14:52:53');
 
 --
 -- Indexes for dumped tables
@@ -136,10 +138,10 @@ ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indexes for table `likes`
+-- Indexes for table `like`
 --
-ALTER TABLE `likes`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `like`
+  ADD PRIMARY KEY (`id_like`);
 
 --
 -- Indexes for table `photos`
@@ -170,16 +172,16 @@ ALTER TABLE `level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `likes`
+-- AUTO_INCREMENT for table `like`
 --
-ALTER TABLE `likes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `like`
+  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id_photos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_photos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `user`
