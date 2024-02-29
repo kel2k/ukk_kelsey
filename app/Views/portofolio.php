@@ -17,7 +17,7 @@
   <!-- ===============================================-->
   <!--    Document Title-->
   <!-- ===============================================-->
-  <title>Portfolio | Selected Works</title>
+  <title>Postingan | Selected Works</title>
 
 
 <body>
@@ -74,7 +74,7 @@
           <div class="col-4">
             <div class="d-none d-lg-flex justify-content-end position-relative z-index-1">
               <div class="position-absolute absolute-centered z-index--1">
-                <h1 class="ms-2 fw-bolder text-outlined text-uppercase text-white pe-none display-1">Portfolio</h1>
+                <h1 class="ms-2 fw-bolder text-outlined text-uppercase text-white pe-none display-1">Postingan</h1>
               </div>
               <div class="d-flex gap-3 align-items-start"><a
                   class="mb-0 ms-auto text-warning fs-0 fw-bold text-uppercase" href="blog.html#contact">Contact Now</a>
@@ -125,9 +125,6 @@
                                     <div class="row align-items-start">
                                         <div class="col-xl-7">
                                             <div class="position-relative">
-                                                <div class="position-absolute start-0 top-0 ms-3">
-                                                    <h5 class="text-white"><?= $project->created_at ?></h5>
-                                                </div>
                                                 <img class="portfolio-img img-fluid"
                                                     src="<?= base_url('assets/images/' . $project->image) ?>"
                                                     alt="" />
@@ -141,26 +138,31 @@
                                         </div>
 
                                         <div class="col-lg-9 col-12 mt-3">
-                                            <div class="custom-block-info">
-                                                <div class="custom-block-top d-flex mb-1">
-                                                    <?php 
-                                                    $id_photos = $project->id_photos;
-                                                    $like = $model->getLike($id_photos);
-                                                    ?>
-                                                    <?php if($like != null): ?>
-                                                        <a class="badge" style="background-color: red;" href="<?= base_url('/Home/dislike/'.$id_photos) ?>">
-                                                            <i class="bi-heart"></i>
-                                                            Dislike
-                                                        </a>
-                                                    <?php else: ?>
-                                                        <a class="badge" style="background-color: blue;" href="<?= base_url('/Home/like/'.$id_photos) ?>">
-                                                            <i class="bi-heart"></i>
-                                                            Like
-                                                        </a>
-                                                    <?php endif; ?>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="custom-block-top d-flex mb-1">
+    <?php 
+    $id_photos = $project->id_photos;
+    $like = $model->getLike($id_photos);
+    $totalLikes = $model->getTotalLikesByPost($id_photos);
+    ?>
+    <?php if($like != null): ?>
+        <a class="badge" style="background-color: red; margin-right: 10px;" href="<?= base_url('/Home/dislike/'.$id_photos) ?>">
+            <i class="bi-heart"></i>
+            Dislike (<?= $totalLikes ?>)
+        </a>
+    <?php else: ?>
+        <a class="badge" style="background-color: blue; margin-right: 10px;" href="<?= base_url('/Home/like/'.$id_photos) ?>">
+            <i class="bi-heart"></i>
+            Like (<?= $totalLikes ?>)
+        </a>
+    <?php endif; ?>
+    
+    <!-- Tambahkan tombol untuk komentar -->
+    <a class="badge" style="background-color: green;" href="<?= base_url('/Home/comment/'.$id_photos) ?>">
+        <i class="bi-chat"></i>
+        Comment
+    </a>
+    </div>
+</div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>

@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\M_model;
+use App\Models\PostModel;
+use App\Models\CommentModel;
 use Dompdf\Dompdf;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -76,7 +78,6 @@ class Home extends BaseController
         echo view('gallery', $data);
         echo view('footer');
     }
-    
     public function portofolio()
     {
         $model = new M_model();
@@ -86,15 +87,38 @@ class Home extends BaseController
         echo view('portofolio', $data);
         echo view('footer');
     }
-    public function comment()
+    public function comment($postId)
     {
         $model = new M_model();
-        $data['projects'] = $model->tampil('photos');
+        $postModel = new PostModel();
+        $commentModel = new CommentModel();
+        $post = $postModel->getPostById($postId); // Menggunakan $postId
+        $comments = $commentModel->getCommentsByPost($postId); // Menggunakan $postId
+        
+        $data = [
+            'post_id' => $postId,
+            'photos' => $post,
+            'comments' => $comments
+        ];
+        
         echo view('header');
-        // echo view('menu');
-        echo view('portofolio', $data);
+        echo view('comment_form', $data);
         echo view('footer');
     }
+    public function submitComment()
+    {
+        $commentModel = new CommentModel();
+        $userId = session()->get('id_user');
+        $postId = $this->request->getPost('post_id');
+        $commentText = $this->request->getPost('comment');
+    
+        // Simpan komentar ke database menggunakan CommentModel
+        $commentModel->addComment(['user_id' => $userId, 'post_id' => $postId, 'comment' => $commentText]);
+    
+        // Redirect kembali ke halaman viewAlbum dengan menyertakan id_album
+        return redirect()->to(base_url('/home/comment/' . $postId));
+    }
+    
     public function upload()
     {
         echo view('/header');
@@ -192,7 +216,7 @@ class Home extends BaseController
     $model = new M_model();
     $model->simpan('photos', $data);
     
-    return redirect()->to('/home/portofolio');
+    return redirect()->to('/home/gallery');
 }
 
 public function aksi_login()

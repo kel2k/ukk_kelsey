@@ -148,7 +148,7 @@
                         <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
                                 data-filter=".professional">Foto Pribadi</a></li>
                         <li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav filter-link" href="#!"
-                                data-filter=".commercial">Commercial</a></li>
+                                data-filter=".commercial">Hobby</a></li>
 
 
 

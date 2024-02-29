@@ -7,6 +7,16 @@ class M_model extends Model
 {
     protected $table = 'photos';
     
+    public function getTotalLikesByPost($id_photos) {
+        $query = $this->db->table('like')  // Menggunakan table() untuk memilih tabel
+            ->select('COUNT(id_like) as total_likes')
+            ->where('post', $id_photos)
+            ->get();
+
+        $result = $query->getRow();  // Menggunakan getRow() untuk mendapatkan satu baris hasil
+        return $result->total_likes;
+    }
+   
     public function isLiked($idGambar, $idUser)
 	{
 		return $this->db->table('like')

@@ -122,7 +122,7 @@
                     <select class="form-control" id="category" name="category" required>
                         <option value="Shortfilms">Pemandangan</option>
                         <option value="Professional">Foto Pribadi</option>
-                        <option value="Commercial">Commercial</option>
+                        <option value="Commercial">Hobby</option>
                     </select>
                 </div>
 
