@@ -5,9 +5,6 @@ namespace App\Controllers;
 use App\Models\M_model;
 use App\Models\PostModel;
 use App\Models\CommentModel;
-use Dompdf\Dompdf;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class Home extends BaseController
@@ -19,13 +16,7 @@ class Home extends BaseController
         echo view('/admin/login');
         // echo view('footer');
     }
-    public function test()
-    {
-        echo view('header');
-        // echo view('/admin/menuutama');
-        echo view('test');
-        echo view('footer');
-    }
+   
     public function like($id){
 		$model = new M_Model();
 		// $where2=array('id_post'=>$id);
@@ -242,18 +233,6 @@ public function aksi_login()
         return redirect()->to('/home/index');
     }
 }
-    public function user()
-    {
-        $model = new M_model();
-        $on = 'user.level=level.id_level';
-
-        $data['vuser'] = $model->join2('user', 'level', $on);
-
-        echo view('header');
-        echo view('menu');
-        echo view('tabel_user', $data);
-        echo view('footer');
-    }
     public function hapus($id)
     {
         $model = new M_model();
